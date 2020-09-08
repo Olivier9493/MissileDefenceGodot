@@ -8,6 +8,9 @@ public class player : Node
 
     public bool gameOver = false;
     [Export] public int health = 3;
+
+    [Export] public int bonus = 5;
+
     public int score = 0;
 
     // Called when the node enters the scene tree for the first time.
@@ -63,6 +66,10 @@ public class player : Node
     public void addScore(int scoreAmount = 1)
     {
         score += scoreAmount;
+        if((score % bonus) == 0) // Check modulo with bonus
+        {
+            health += 1;
+        }
         updateUI();
         bulletBrain.increaseDifficulty();
     }
