@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C# Missile Defence", "C# Missile Defence.csproj", "{033BDFFC-479C-48D9-8F1B-887B9C5E0092}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{033BDFFC-479C-48D9-8F1B-887B9C5E0092}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{033BDFFC-479C-48D9-8F1B-887B9C5E0092}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{033BDFFC-479C-48D9-8F1B-887B9C5E0092}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{033BDFFC-479C-48D9-8F1B-887B9C5E0092}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{033BDFFC-479C-48D9-8F1B-887B9C5E0092}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{033BDFFC-479C-48D9-8F1B-887B9C5E0092}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal
