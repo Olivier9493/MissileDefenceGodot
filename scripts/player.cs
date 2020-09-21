@@ -72,7 +72,6 @@ public class player : Node
             var healthAnimation = (AnimationPlayer)GetNode("/root/game/hud/healthBonusAnimation");
             healthAnimation.Play("BonusAnim");
             health += 1;
-            
         }
         updateUI();
         bulletBrain.increaseDifficulty();
