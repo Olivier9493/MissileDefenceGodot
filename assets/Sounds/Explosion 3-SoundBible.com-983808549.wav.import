@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Explosion 3-SoundBible.com-983808549.wav-be02c29024a8efb558514da04375a97c.sample"
+
+[deps]
+
+source_file="res://assets/Sounds/Explosion 3-SoundBible.com-983808549.wav"
+dest_files=[ "res://.import/Explosion 3-SoundBible.com-983808549.wav-be02c29024a8efb558514da04375a97c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

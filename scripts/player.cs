@@ -18,6 +18,7 @@ public class player : Node
     {
         bulletBrain = (bulletBrain)GetNode("/root/game/bullets/bulletBrain");
         updateUI();
+        
 
     }
 

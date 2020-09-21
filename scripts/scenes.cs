@@ -7,5 +7,5 @@ public class scenes : Node
   public PackedScene _sceneExplosion = (PackedScene)GD.Load("res://scenes/explosion.tscn");
   public PackedScene _sceneBulletStopper = (PackedScene)GD.Load("res://scenes/bulletStopper.tscn");  
   public PackedScene _sceneCloud = (PackedScene)GD.Load("res://scenes/cloud.tscn");
-    
+  
 }
