@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/tileMapGround.png" type="Texture" id=1]
 [ext_resource path="res://assets/tileMapStars.png" type="Texture" id=2]
@@ -48,7 +48,29 @@ font_data = ExtResource( 6 )
 size = 90
 font_data = ExtResource( 6 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="Animation" id=5]
+resource_name = "BonusAnim"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("healthBonusAnimation/healthBonus:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 0.9, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0, 1.0, 0.0 ]
+}
+
+[sub_resource type="DynamicFont" id=6]
+size = 32
+outline_size = 1
+outline_color = Color( 0.929412, 0.94902, 0.0431373, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 531.6, 62.2 )
 
 [node name="game" type="Node2D"]
@@ -88,8 +110,10 @@ position = Vector2( 388.46, 479.027 )
 [node name="hud" type="Node" parent="."]
 
 [node name="healthAndScore" type="Label" parent="hud"]
-margin_right = 1022.0
-margin_bottom = 134.0
+margin_left = 0.707092
+margin_top = -1.76778
+margin_right = 1022.71
+margin_bottom = 132.232
 custom_fonts/font = SubResource( 3 )
 text = "Hello World"
 align = 1
@@ -118,6 +142,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="healthBonusAnimation" type="AnimationPlayer" parent="hud"]
+anims/BonusAnim = SubResource( 5 )
+
+[node name="healthBonus" type="Label" parent="hud/healthBonusAnimation"]
+margin_left = 353.852
+margin_top = 192.917
+margin_right = 585.852
+margin_bottom = 267.917
+custom_fonts/font = SubResource( 6 )
+text = "Well done
+Health + 1"
+align = 1
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="player" type="Node" parent="."]
 script = ExtResource( 5 )
 
@@ -125,7 +166,7 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerHitZone"]
 position = Vector2( 505, 542.5 )
-shape = SubResource( 5 )
+shape = SubResource( 7 )
 [connection signal="timeout" from="bullets/bulletBrain/enemySpawner" to="bullets/bulletBrain" method="_on_enemySpawner_timeout"]
 [connection signal="timeout" from="bullets/bulletBrain/cloudSpawner" to="bullets/bulletBrain" method="_on_cloudSpawner_timeout"]
 [connection signal="area_entered" from="player/playerHitZone" to="player" method="_on_playerHitZone_area_entered"]

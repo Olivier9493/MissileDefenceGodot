@@ -6,7 +6,7 @@ public class bulletBrain : Node
 
     scenes scenes = new scenes();
     Timer enemySpawner;
-
+    
     [Export] public float maxSpawnInterval = 4;
     [Export] public float minSpawnInterval = 0.5f;
     [Export] public float spawnIntervalDecrease = 0.2f;

@@ -1,0 +1,29 @@
+﻿<Project Sdk="Godot.NET.Sdk/3.2.3">
+  <PropertyGroup>
+    <ProjectGuid>{033BDFFC-479C-48D9-8F1B-887B9C5E0092}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CMissileDefence</RootNamespace>
+    <AssemblyName>C# Missile Defence</AssemblyName>
+    <GodotProjectGeneratorVersion>1.0.0.0</GodotProjectGeneratorVersion>
+    <TargetFramework>net472</TargetFramework>
+    <!--The following properties were overriden during migration to prevent errors.
+    Enabling them may require other manual changes to the project and its files.-->
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="scripts\bullet.cs" />
+    <Compile Include="scripts\bulletBrain.cs" />
+    <Compile Include="scripts\bulletStopper.cs" />
+    <Compile Include="scripts\cannonBarrel.cs" />
+    <Compile Include="scripts\cloud.cs" />
+    <Compile Include="scripts\explosion.cs" />
+    <Compile Include="scripts\player.cs" />
+    <Compile Include="scripts\scenes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+</Project>

@@ -18,6 +18,7 @@ public class player : Node
     {
         bulletBrain = (bulletBrain)GetNode("/root/game/bullets/bulletBrain");
         updateUI();
+        
 
     }
 
@@ -68,6 +69,8 @@ public class player : Node
         score += scoreAmount;
         if((score % bonus) == 0) // Check modulo with bonus
         {
+            var healthAnimation = (AnimationPlayer)GetNode("/root/game/hud/healthBonusAnimation");
+            healthAnimation.Play("BonusAnim");
             health += 1;
         }
         updateUI();
