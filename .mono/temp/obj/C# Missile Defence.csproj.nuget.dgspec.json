@@ -1,0 +1,43 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/olivierbecker/Dropbox/Godot_Projects/Missile Defence/C# Missile Defence.csproj": {}
+  },
+  "projects": {
+    "/home/olivierbecker/Dropbox/Godot_Projects/Missile Defence/C# Missile Defence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/olivierbecker/Dropbox/Godot_Projects/Missile Defence/C# Missile Defence.csproj",
+        "projectName": "C# Missile Defence",
+        "projectPath": "/home/olivierbecker/Dropbox/Godot_Projects/Missile Defence/C# Missile Defence.csproj",
+        "packagesPath": "/home/olivierbecker/.nuget/packages/",
+        "outputPath": "/home/olivierbecker/Dropbox/Godot_Projects/Missile Defence/.mono/temp/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/olivierbecker/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "runtimeIdentifierGraphPath": "/usr/lib/mono/msbuild/Current/bin/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+Godot Engine v3.2.3.stable.mono.official - https://godotengine.org
+OpenGL ES 3.0 Renderer: Mesa Intel(R) UHD Graphics (CML GT2)
+ 
+Mono: Log file is: '/home/olivierbecker/.local/share/godot/mono/mono_logs/2020_09_21 20.43.39 (13836).txt'
+**ERROR**: Cannot instance script because the project assembly is not loaded. Script: 'res://scripts/bulletBrain.cs'.
+   At: modules/mono/csharp_script.cpp:2939:can_instance() - Method failed. Returning: __null
+**ERROR**: Cannot instance script because the project assembly is not loaded. Script: 'res://scripts/cannonBarrel.cs'.
+   At: modules/mono/csharp_script.cpp:2939:can_instance() - Method failed. Returning: __null
+**ERROR**: Cannot instance script because the project assembly is not loaded. Script: 'res://scripts/player.cs'.
+   At: modules/mono/csharp_script.cpp:2939:can_instance() - Method failed. Returning: __null
+**ERROR**: Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_cloudSpawner_timeout': Method not found..
+   At: core/object.cpp:1260:emit_signal() - Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_cloudSpawner_timeout': Method not found..
+**ERROR**: Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_enemySpawner_timeout': Method not found..
+   At: core/object.cpp:1260:emit_signal() - Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_enemySpawner_timeout': Method not found..
+**ERROR**: Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_cloudSpawner_timeout': Method not found..
+   At: core/object.cpp:1260:emit_signal() - Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_cloudSpawner_timeout': Method not found..
+**ERROR**: Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_enemySpawner_timeout': Method not found..
+   At: core/object.cpp:1260:emit_signal() - Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_enemySpawner_timeout': Method not found..
+**ERROR**: Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_cloudSpawner_timeout': Method not found..
+   At: core/object.cpp:1260:emit_signal() - Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_cloudSpawner_timeout': Method not found..
+**ERROR**: Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_cloudSpawner_timeout': Method not found..
+   At: core/object.cpp:1260:emit_signal() - Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_cloudSpawner_timeout': Method not found..
+**ERROR**: Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_enemySpawner_timeout': Method not found..
+   At: core/object.cpp:1260:emit_signal() - Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_enemySpawner_timeout': Method not found..
+**ERROR**: Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_cloudSpawner_timeout': Method not found..
+   At: core/object.cpp:1260:emit_signal() - Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_cloudSpawner_timeout': Method not found..
+**ERROR**: Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_enemySpawner_timeout': Method not found..
+   At: core/object.cpp:1260:emit_signal() - Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_enemySpawner_timeout': Method not found..
+**ERROR**: Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_cloudSpawner_timeout': Method not found..
+   At: core/object.cpp:1260:emit_signal() - Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_cloudSpawner_timeout': Method not found..
+**ERROR**: Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_cloudSpawner_timeout': Method not found..
+   At: core/object.cpp:1260:emit_signal() - Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_cloudSpawner_timeout': Method not found..
+**ERROR**: Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_enemySpawner_timeout': Method not found..
+   At: core/object.cpp:1260:emit_signal() - Error calling method from signal 'timeout': 'Node(bulletBrain.cs)::_on_enemySpawner_timeout': Method not found..
