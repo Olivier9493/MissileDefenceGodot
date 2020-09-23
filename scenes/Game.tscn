@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/tileMapGround.png" type="Texture" id=1]
 [ext_resource path="res://assets/tileMapStars.png" type="Texture" id=2]
@@ -47,8 +47,14 @@ size = 44
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 90
+size = 35
 font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFontData" id=8]
+
+[sub_resource type="DynamicFont" id=9]
+size = 20
+font_data = SubResource( 8 )
 
 [sub_resource type="Animation" id=5]
 resource_name = "BonusAnim"
@@ -151,14 +157,46 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="highScoresScreen" type="Node2D" parent="hud"]
+
+[node name="Sprite" type="Sprite" parent="hud/highScoresScreen"]
+position = Vector2( 514.122, 289.106 )
+scale = Vector2( 8.5321, 4.95414 )
+texture = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="hud/highScoresScreen"]
+margin_left = 14.0
+margin_top = 126.0
+margin_right = 1010.0
+margin_bottom = 223.0
+custom_fonts/font = SubResource( 4 )
+text = "Well Done, you're in the hall of fame!
+Please enter your name
+Confirm it with \"ENTER\""
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="LineEdit" parent="hud/highScoresScreen"]
+margin_left = 252.0
+margin_top = 304.0
+margin_right = 764.0
+margin_bottom = 390.0
+custom_fonts/font = SubResource( 9 )
+text = "Your Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="healthBonusAnimation" type="AnimationPlayer" parent="hud"]
 anims/BonusAnim = SubResource( 5 )
 
 [node name="healthBonus" type="Label" parent="hud/healthBonusAnimation"]
-margin_left = 353.852
-margin_top = 192.917
-margin_right = 585.852
-margin_bottom = 267.917
+margin_left = 220.852
+margin_top = 22.917
+margin_right = 452.852
+margin_bottom = 97.917
 custom_fonts/font = SubResource( 6 )
 text = "Well done
 Health + 1"

@@ -59,8 +59,8 @@ public class player : Node
             //bulletBrain.spawnExplosion(cannon.GlobalPosition, "enemy");
             bulletBrain.CallDeferred("spawnExplosion", cannon.GlobalPosition, "enemy");
             cannon.QueueFree();
-            
-
+            // Stop the sound
+            AudioServer.SetBusVolumeDb(0,0);
         }
 
     }
