@@ -69,6 +69,10 @@ public class bulletBrain : Node
         {
             bullet.speed = enemyBulletSpeed;
         }
+
+        //set the launch sound
+        var launchSound =(AudioStreamPlayer)GetNode("/root/game/bullets/bulletBrain/launchAudioPlayer");
+        launchSound.Play();
     }
 
     public void spawnExplosion(Vector2 spawnPosition, string animationName)
@@ -82,7 +86,11 @@ public class bulletBrain : Node
        var explosionSprite =(AnimatedSprite)explosion.GetNode("AnimatedSprite");
        explosionSprite.Play(animationName);
 
+       // Set the explosion sound
+       var explosionSound =(AudioStreamPlayer)GetNode("/root/game/bullets/bulletBrain/explosionAudioPlayer");
+       explosionSound.Play();
 
+       
     }
 
     public void spawnCloud()
