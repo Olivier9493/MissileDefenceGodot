@@ -35,7 +35,11 @@ public class bulletBrain : Node
 
    public void _on_enemySpawner_timeout()
    {
-       spawnEnemy();
+       var gameOverScreen = (Node2D)GetNode("/root/game/hud/gameOverScreen");
+       if(gameOverScreen.Visible == false){
+        spawnEnemy();
+       } 
+
    }
 
    public void _on_cloudSpawner_timeout()

@@ -17,6 +17,7 @@ public class player : Node
     public override void _Ready()
     {
         bulletBrain = (bulletBrain)GetNode("/root/game/bullets/bulletBrain");
+        loadHighScore();
         updateUI();
         
 
@@ -54,13 +55,12 @@ public class player : Node
 
             var gameOverScreen = (Node2D)GetNode("/root/game/hud/gameOverScreen");
             gameOverScreen.Visible = true;
-
+            // remove the player cannon
             var cannon = (Node2D)GetNode("/root/game/foreground/cannon");
             //bulletBrain.spawnExplosion(cannon.GlobalPosition, "enemy");
             bulletBrain.CallDeferred("spawnExplosion", cannon.GlobalPosition, "enemy");
             cannon.QueueFree();
-            // Stop the sound
-            AudioServer.SetBusVolumeDb(0,0);
+            
         }
 
     }
@@ -85,6 +85,26 @@ public class player : Node
         healthAndScore.Text = newHudText;
     }
 
+    public void updateHighScoreUI(string name, string highScore)
+    {
+        var highScoreDisplay = (Label)GetNode("/root/game/hud/highScoreDisplay");
+        var highScoreText = "HIGH SCORE:   " + highScore + " - " + name;
+        highScoreDisplay.Text = highScoreText;
+    }
+
+    public void loadHighScore()
+    {
+        string nameHigh = "xxx";
+        string score = "0";
+        var highScoreSaved = new File();
+        if(highScoreSaved.FileExists("res://savedData/highscore.save"))
+        {
+            var nodeData = new Godot.Collections.Dictionary<string, string>((Godot.Collections.Dictionary)JSON.Parse(highScoreSaved.GetLine()).Result);
+            score = nodeData.Values.ToString();
+            nameHigh = nodeData.Keys.ToString();
+        }
+        updateHighScoreUI(nameHigh, score);
+    }
 
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
