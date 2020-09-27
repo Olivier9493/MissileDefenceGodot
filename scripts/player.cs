@@ -19,8 +19,6 @@ public class player : Node
         bulletBrain = (bulletBrain)GetNode("/root/game/bullets/bulletBrain");
         loadHighScore();
         updateUI();
-        
-
     }
 
     public override void _Input(InputEvent _inputEvent)
