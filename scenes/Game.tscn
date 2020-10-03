@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://assets/tileMapGround.png" type="Texture" id=1]
 [ext_resource path="res://assets/tileMapStars.png" type="Texture" id=2]
@@ -50,7 +50,16 @@ font_data = ExtResource( 6 )
 size = 60
 font_data = ExtResource( 6 )
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 6 )
+
+[sub_resource type="Animation" id=8]
 length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("healthBonusAnimation/healthBonus:percent_visible")
@@ -65,17 +74,17 @@ tracks/0/keys = {
 "values": [ 0.0, 1.0, 1.0, 0.0 ]
 }
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=9]
 size = 32
 outline_size = 1
 outline_color = Color( 0.929412, 0.94902, 0.0431373, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=10]
 size = 11
 font_data = ExtResource( 6 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 531.6, 62.2 )
 
 [node name="game" type="Node2D"]
@@ -144,9 +153,9 @@ texture = ExtResource( 7 )
 
 [node name="Label" type="Label" parent="hud/gameOverScreen"]
 margin_left = 1.0
-margin_top = 150.0
+margin_top = 149.0
 margin_right = 1023.0
-margin_bottom = 334.0
+margin_bottom = 333.0
 custom_fonts/font = SubResource( 4 )
 text = "GAME OVER"
 align = 1
@@ -154,47 +163,52 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="highScoresScreen" type="Node2D" parent="hud"]
+[node name="highScoreReached" type="Label" parent="hud/gameOverScreen"]
 visible = false
-
-[node name="Sprite" type="Sprite" parent="hud/highScoresScreen"]
-position = Vector2( 514.122, 289.106 )
-scale = Vector2( 8.5321, 4.95414 )
-texture = ExtResource( 7 )
-
-[node name="Label" type="Label" parent="hud/highScoresScreen"]
-margin_left = 14.0
-margin_top = 126.0
-margin_right = 1010.0
-margin_bottom = 223.0
-custom_fonts/font = SubResource( 4 )
-text = "Well Done, you're in the hall of fame!
-Please enter your name
-Confirm it with \"ENTER\""
-align = 1
+margin_left = 282.0
+margin_top = 232.0
+margin_right = 749.0
+margin_bottom = 250.0
+custom_fonts/font = SubResource( 5 )
+text = "Congratulations ! You have the best score"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="name" type="LineEdit" parent="hud/highScoresScreen"]
-margin_left = 252.0
-margin_top = 304.0
-margin_right = 764.0
-margin_bottom = 390.0
-text = "Your Name"
+[node name="inputNameField" type="LineEdit" parent="hud/gameOverScreen"]
+visible = false
+margin_left = 258.0
+margin_top = 287.0
+margin_right = 770.0
+margin_bottom = 373.0
+custom_fonts/font = SubResource( 6 )
+placeholder_text = "You Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="saveRestartButton" type="Button" parent="hud/gameOverScreen"]
+visible = false
+margin_left = 407.0
+margin_top = 392.0
+margin_right = 583.0
+margin_bottom = 423.0
+custom_fonts/font = SubResource( 7 )
+action_mode = 0
+text = "Save & Restart new Game"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="healthBonusAnimation" type="AnimationPlayer" parent="hud"]
-anims/BonusAnim = SubResource( 5 )
+anims/BonusAnim = SubResource( 8 )
 
 [node name="healthBonus" type="Label" parent="hud/healthBonusAnimation"]
 margin_left = 404.852
 margin_top = 164.917
 margin_right = 636.852
 margin_bottom = 239.917
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 9 )
 text = "Well done
 Health + 1"
 align = 1
@@ -204,11 +218,11 @@ __meta__ = {
 }
 
 [node name="highScoreDisplay" type="Label" parent="hud"]
-margin_left = 732.0
+margin_left = 756.0
 margin_top = 8.0
-margin_right = 975.0
+margin_right = 999.0
 margin_bottom = 37.0
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
 text = "High Score"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -221,7 +235,7 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/playerHitZone"]
 position = Vector2( 505, 542.5 )
-shape = SubResource( 7 )
+shape = SubResource( 11 )
 [connection signal="timeout" from="bullets/bulletBrain/enemySpawner" to="bullets/bulletBrain" method="_on_enemySpawner_timeout"]
 [connection signal="timeout" from="bullets/bulletBrain/cloudSpawner" to="bullets/bulletBrain" method="_on_cloudSpawner_timeout"]
 [connection signal="area_entered" from="player/playerHitZone" to="player" method="_on_playerHitZone_area_entered"]
